@@ -8,6 +8,7 @@ body{
     height: 500vh;
     width: 100vw;
     background-color: aquamarine;
+    overflow-x: hidden;
 }
 
 /* video{

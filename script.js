@@ -1,6 +1,6 @@
 videoElem = document.querySelector('#videoContainer')
 let firstTime = true;
-let videoPlaying;
+let videoPlaying = true;
 let mute = 1;
 playMute();
 ScrollTrigger.create({
@@ -29,7 +29,8 @@ function moveToMain() {
 
 function moveToMini() {
     console.log('moveToMini');
-    document.getElementById("videoContainer").style.cssText = `
+    if (videoPlaying) {
+        document.getElementById("videoContainer").style.cssText = `
     display: block; 
     position: fixed;
     top: auto;
@@ -40,6 +41,7 @@ function moveToMini() {
     height: 150px;
     width: 180px;
   `;
+    }
 }
 
 
@@ -68,6 +70,7 @@ function playMute() {
     function togglePlay(e) {
         e.stopPropagation();
         var playOrPause = video.paused ? 'play' : 'pause';
+        videoPlaying = video.paused ? true : false;
         video[playOrPause]();
     }
 
