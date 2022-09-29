@@ -11,6 +11,10 @@ ScrollTrigger.create({
     onLeaveBack: moveToMini,
 });
 
+document.querySelector(".closeBtn").addEventListener("click", ()=>{
+    videoElem.classList.add("hidden");
+});
+
 function moveToMain() {
     console.log('moveToMain');
     if (firstTime) {

@@ -54,3 +54,11 @@ video{
     background-color: rgba(1,1,1,0);;
     border: none;
 }
+
+.closeBtn{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: larger;
+    color:white;
+}
